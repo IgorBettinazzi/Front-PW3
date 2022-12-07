@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs')  %>
+
+<title>EDIÇÃO DE PIZZAS - LIBRI</title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <%- include('../partials/menu.ejs') %>
+
+        <div class="card mt-2">
+            <div class="card-header">EDIÇÃO DE PIZZA</div>
+        </div>
+
+        <div class="card-body">
+            <form action="http://localhost:3001/alterarPizza" method="post">
+                
+                <label for="">PIZZA</label>
+
+                <input
+                    type="hidden"
+                    name="id" id="id"
+                    value="<%= pizza.id %>"/>
+
+                <input type="text" class="form-control" 
+                        name="nome_pizza" id="nome_pizza"
+                        placeholder="DIGITE UMA PIZZA "
+                        value="<%= pizza.nome_pizza %>">
+                
+                <button class="btn btn-success mt-2">EDITAR</button>
+            </form>
+        </div>
+    </div>
+
+    </body>
+
+<%- include('../partials/footer.ejs')  %>

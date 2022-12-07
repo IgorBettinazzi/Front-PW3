@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs')  %>
+
+<title>CADASTRO DE PIZZAS - LIBRI</title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <%- include('../partials/menu.ejs') %>
+
+        <div class="card mt-2">
+            <div class="card-header">CADASTRO DE PIZZAS</div>
+        </div>
+
+        <div class="card-body">
+            <form action="http://localhost:3000/inserirPizza" method="post">
+                
+                <label for="">Pizza</label>
+                <input type="text" class="form-control" 
+                        name="nome_pizza" id="nome_pizza"
+                        placeholder="DIGITE UMA PIZZA">
+                
+                <button class="btn btn-success mt-2">CADASTRAR</button>
+            </form>
+        </div>
+    </div>
+
+    </body>
+
+<%- include('../partials/footer.ejs')  %>
